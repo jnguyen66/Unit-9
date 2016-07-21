@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="formreceiver.com">
+  Name:     <input type="text" id="realName" name="realName"><br>
+  Login Name:     <input type="text" id="login" name="login"><br>
+  Password: <input type="password" id="password" name="password"><br>
+  Retype Password: <input type="password" id="password2" name="password2"><br>
+  Email:    <input type="text" id="email" name="email"><br>
+  <input type="submit" onclick="myFunction()">
+</form>
+
+
+<script>
+
+    document.getElementById("login").required = true;
+    document.getElementById("password").required = true;
+
+
+var myFunction=function(){
+ var password= document.getElementById("password").value;
+ var password2= document.getElementById("password2").value;
+ var login= document.getElementById("login").value;
+ if (login==null || login=="",password==null || password=="", password2==null || password2=="")
+      {
+      alert("Please Fill A Login Name & Password");
+      }
+if (password != password2){
+alert("Passwords entered do not match");
+}
+
+}
+    
+</script>
+
+</body>
+</html>

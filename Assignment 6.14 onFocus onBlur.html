@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+<style>
+label{display:none}
+</style>
+
+ 
+
+<body>
+
+<input type="text" id="myName" name="name" onfocus="display()" onblur="hide(1)"> <label id="name">Please enter name</label><br>
+
+<input type="text" id="myAddress" name="address" onfocus="display()" onblur="hide(2)"> <label id="address">Please enter address</label><br>
+
+<input type="text" id="myEmail" name="email" onfocus="display()" onblur="hide(3)"> <label id="email">Please enter email</label><br>
+ 
+
+<script>
+
+var display=function(){
+     var x = document.activeElement.id;
+if(x==="myName"){
+      document.getElementById("name").style.display="inline";
+};
+if(x==="myAddress"){
+      document.getElementById("address").style.display="inline";
+};
+if(x==="myEmail"){
+      document.getElementById("email").style.display="inline";
+};
+};
+
+ 
+
+ 
+
+var hide=function(labelNumber){
+if(labelNumber===1){
+      document.getElementById("name").style.display="none";
+};
+if(labelNumber===2){
+      document.getElementById("address").style.display="none";
+};
+
+if(labelNumber===3){
+      document.getElementById("email").style.display="none";
+};
+};
+
+</script>
+</body>
+</html>
+
+ 
